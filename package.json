@@ -1,0 +1,17 @@
+{
+  "name": "SecureCache",
+  "version": "0.0.2",
+  "description": "ITSector SecureCache Cordova Plugin",
+  "cordova": {
+    "id": "cordova-plugin-secure-cache",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "author": "Afonso Rosa",
+  "license": "ISC"
+}
