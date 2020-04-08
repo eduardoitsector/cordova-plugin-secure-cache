@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-secure-cache" 
+	version="0.0.2" 
+	xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<name>SecureCache</name>
+  <description>Cordova Secure Cache Plugin for use with iOS by ITSector</description>
+	
+	<asset src="www/SecureCache.js" target="js/SecureCache.js"/>
+	<js-module name="SecureCache" src="www/SecureCache.js">
+		<clobbers target="SecureCache" />
+	</js-module>
+	
+	<platform name="ios">
+		<config-file parent="/*" target="config.xml">
+			<feature name="SecureCache">
+				<param name="ios-package" value="SecureCache" />
+			</feature>
+		</config-file>
+		<source-file src="src/ios/SecureCache.m" />
+		
+		<header-file src="src/ios/CustomURLCache.h" />
+		<source-file src="src/ios/CustomURLCache.m" />
+		
+		<header-file src="src/ios/Configs.h" />
+		<header-file src="src/ios/FXKeychain.h" />
+		<source-file src="src/ios/FXKeychain.m" />
+		
+        <header-file src="src/ios/Frameworks/RNCryptor/RNCryptor.h" />
+        <source-file src="src/ios/Frameworks/RNCryptor/RNCryptor.m" />
+
+        <header-file src="src/ios/Frameworks/RNCryptor/RNCryptor+Private.h" />
+
+        <header-file src="src/ios/Frameworks/RNCryptor/RNCryptor+Swift.h" />
+
+        <header-file src="src/ios/Frameworks/RNCryptor/RNCryptorEngine.h" />
+        <source-file src="src/ios/Frameworks/RNCryptor/RNCryptorEngine.m" />
+
+        <header-file src="src/ios/Frameworks/RNCryptor/RNDecryptor.h" />
+        <source-file src="src/ios/Frameworks/RNCryptor/RNDecryptor.m" />
+
+        <header-file src="src/ios/Frameworks/RNCryptor/RNEncryptor.h" />
+        <source-file src="src/ios/Frameworks/RNCryptor/RNEncryptor.m" />
+	</platform>
+</plugin>
